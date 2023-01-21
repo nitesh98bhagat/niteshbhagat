@@ -14,7 +14,7 @@ export const educationList = [
     location: "Kolkata, India",
   },
   {
-    degree: "B.Sc",
+    degree: "Bachelor in Science",
     year: "2016-2017",
     institute: "Serampore College",
     subtitle: "Dropped out",
@@ -26,6 +26,8 @@ export const educationList = [
     institute: "Regent Institute Science & Technology",
     subtitle: "",
     location: "Kolkata, India",
+    desciption:
+      "Completed my diploma in computer science and technology from Regent Institute Science & Technology",
   },
   {
     degree: "B.Tech in Computer Science",

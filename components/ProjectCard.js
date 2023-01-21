@@ -1,18 +1,16 @@
-import { SiFirebase, SiNextdotjs } from "react-icons/si";
-import TechPill from "./TechPill";
-
-function ProjectCard() {
+function ProjectCard({ title, link, tech }) {
   return (
-    <div className="flex-col flex space-y-2">
-      <div className="bg-zinc-800 rounded-xl h-48 text-center">s</div>
-      <h1 className="text-lg">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-      </h1>
-      <div className="flex-wrap flex gap-3">
-        <TechPill icon={<SiNextdotjs />} title="Next js" size={"text-sm"} />
-        <TechPill icon={<SiFirebase />} title="Firebase" size={"text-sm"} />
-      </div>
-    </div>
+    <a
+      href={link}
+      target="_blank"
+      rel="noreferrer"
+      className="flex-col flex  border border-zinc-800 p-3 rounded-lg  hover:bg-zinc-800/30 cursor-pointer"
+    >
+      <h1 className="text-base ">{title ?? "Name of the project"}</h1>
+      <div className="flex-1" />
+      <h1 className="text-sm text-emerald-600 py-2 ">{link ?? "/"}</h1>
+      <div className="flex-wrap flex gap-3  ">{tech}</div>
+    </a>
   );
 }
 
