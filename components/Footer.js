@@ -4,7 +4,7 @@ import { MdAlternateEmail } from "react-icons/md";
 
 function Footer() {
   return (
-    <footer className="flex-col flex  justify-center items-center text-zinc-500 bg-zinc-800/20 p-3">
+    <footer className="flex-col flex  justify-center items-center text-zinc-500 bg-zinc-800 p-3">
       <div className="flex-col md:flex-row flex justify-around w-full py-10 space-y-3">
         <div className="flex-col text-zinc-50 ">
           <h1 className="text-4xl font-bold ">Nitesh Kumar Bhagat</h1>

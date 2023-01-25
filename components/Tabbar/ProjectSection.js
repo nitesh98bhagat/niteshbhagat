@@ -4,6 +4,7 @@ import {
   SiFlutter,
   SiNextdotjs,
   SiReact,
+  SiTailwindcss,
   SiVercel,
 } from "react-icons/si";
 import ProjectCard from "../ProjectCard";
@@ -40,6 +41,7 @@ function ProjectSection() {
               />,
             ],
           },
+        
           {
             title: "Clubhouse clone using Flutter web",
             link: "https://nitesh-clubhouse.web.app/#/",
@@ -111,6 +113,9 @@ function ProjectSection() {
                 title="Next"
                 size={"text-sm"}
               />,
+              <TechPill key="tailwind" icon={<SiTailwindcss />}
+                title="TailwindCss"
+                size={"text-sm"} />,
               <TechPill
                 key={"nextjs-vercel-deployed"}
                 icon={<SiVercel />}
