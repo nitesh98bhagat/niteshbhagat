@@ -4,6 +4,7 @@ import {
   SiFlutter,
   SiNextdotjs,
   SiReact,
+  SiRedux,
   SiTailwindcss,
   SiVercel,
 } from "react-icons/si";
@@ -24,6 +25,36 @@ function ProjectSection() {
       <div className="grid-cols-1 sm:grid-cols-3 grid gap-3 p-3 sm:p-0">
         {[
           {
+            title: "Stockly | Stock Trading App with Finnhub API",
+            link: "https://stockly-beta.vercel.app/",
+            tech: [
+              <TechPill
+                key={"nextjs"}
+                icon={<SiNextdotjs />}
+                title="Next js"
+                size={"text-sm"}
+              />,
+              <TechPill
+                key={"vercel"}
+                icon={<SiVercel />}
+                title="Vercel"
+                size={"text-sm"}
+              />,
+              <TechPill
+                key={"Firebase"}
+                icon={<SiFirebase />}
+                title="Firebase"
+                size={"text-sm"}
+              />,
+              <TechPill
+                key={"Redux"}
+                icon={<SiRedux />}
+                title="Redux"
+                size={"text-sm"}
+              />,
+            ],
+          },
+          {
             title: "Buyzone | E-commerce webapp using Next js & TailwindCss",
             link: "https://buyzone.vercel.app/",
             tech: [
@@ -41,7 +72,7 @@ function ProjectSection() {
               />,
             ],
           },
-        
+
           {
             title: "Clubhouse clone using Flutter web",
             link: "https://nitesh-clubhouse.web.app/#/",
@@ -113,9 +144,12 @@ function ProjectSection() {
                 title="Next"
                 size={"text-sm"}
               />,
-              <TechPill key="tailwind" icon={<SiTailwindcss />}
+              <TechPill
+                key="tailwind"
+                icon={<SiTailwindcss />}
                 title="TailwindCss"
-                size={"text-sm"} />,
+                size={"text-sm"}
+              />,
               <TechPill
                 key={"nextjs-vercel-deployed"}
                 icon={<SiVercel />}

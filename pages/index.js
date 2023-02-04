@@ -127,6 +127,30 @@ export default function Home() {
 
         {[
           {
+            title: "Airbnb clone",
+            link: "/projects/airbnb",
+            tech: [
+              <TechPill
+                key={"nextjsss"}
+                icon={<SiNextdotjs />}
+                title="Next"
+                size={"text-sm"}
+              />,
+              <TechPill
+                key="tailwind"
+                icon={<SiTailwindcss />}
+                title="TailwindCss"
+                size={"text-sm"}
+              />,
+              <TechPill
+                key={"nextjs-vercel-deployed"}
+                icon={<SiVercel />}
+                title="Vercel"
+                size={"text-sm"}
+              />,
+            ],
+          },
+          {
             title: "VSCODE Clone UI",
             link: "/projects/vscode-clone",
             tech: [
