@@ -93,12 +93,18 @@ export default function Home() {
           </div>
         </div>
 
-        <Image
-          src="https://firebasestorage.googleapis.com/v0/b/fleeke-ebe0e.appspot.com/o/webAssets%2FWhatsApp%20Image%202020-02-17%20at%2011.44.18%20AM.jpeg?alt=media&token=ed3e9338-bbdd-4b6e-94db-8822931e6b83"
+        {/* <Image
+          src="https://firebasestorage.googleapis.com/v0/b/fleeke-ebe0e.appspot.com/o/uploads%2FScreenshot_2023-03-21-17-28-25-56.jpg?alt=media&token=fd967908-a581-416f-ba01-3b3760126072"
           alt="Nitesh Bhagat's picture"
           width={200}
           height={200}
-          className="rounded-full sm:w-1/3 sm:h-1/3 object-contain border-4 md:border-8 border-zinc-100  "
+          className="rounded-full sm:w-1/3 sm:h-1/3 object-cover border-4 md:border-8 border-zinc-100  "
+        /> */}
+
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/fleeke-ebe0e.appspot.com/o/uploads%2FSnapchat-1105126184.jpg?alt=media&token=81b83af5-bb42-47a2-8cdb-e1e35117d0bb"
+          alt="Nitesh Bhagat's picture"
+          className="rounded-full aspect-square w-1/3 h-1/3  object-cover border-4 md:border-8 border-zinc-100  "
         />
       </div>
 
@@ -123,7 +129,7 @@ export default function Home() {
         <h1 className="text-2xl sm:text-4xl font-bold cursor-pointer  p-3 sm:p-0 mt-10">
           UI Design
         </h1>
-        <p className="mb-10">User Interface Design Practice</p>
+        <p className="mb-10 mx-4 sm:mx-0">User Interface Design Practice</p>
 
         {[
           {
@@ -209,7 +215,7 @@ export default function Home() {
       </div>
 
       {/* languages, programing lang */}
-      {/* <div className="flex-row flex justify-between p-24">
+      <div className="flex-row flex justify-between p-24">
         <HiLanguage size={300} className="text-emerald-500" />
         <div className="flex-col flex">
           <h1 className="text-4xl font-bold">Comunicative Languages</h1>
@@ -238,7 +244,7 @@ export default function Home() {
             ))}
           </ul>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }
