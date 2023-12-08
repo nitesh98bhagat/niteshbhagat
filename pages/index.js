@@ -34,7 +34,9 @@ export default function Home() {
   return (
     <div className="flex flex-col bg-zinc-900 text-zinc-50">
       <Head>
-        <title>Nitesh Kumar Bhagat</title>
+        <title>
+          Nitesh Kumar Bhagat | Experienced in Web development, UI/UX{" "}
+        </title>
 
         <link rel="icon" href="/favicon.ico" />
 
