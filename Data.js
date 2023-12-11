@@ -37,3 +37,23 @@ export const educationList = [
     location: "Kolkata, India",
   },
 ];
+
+export const workExperience = [
+  {
+    degree: "Frontend Developer",
+    year: "June 2023 - Current",
+    institute: "Rehook.ai",
+    subtitle: "Full Time",
+    location: "Bangalore, India",
+    desciption:
+      "I've been working in Rehook.ai since June 2023. Here my role is defined as a frontend developer who crafts dynamic and elegant UI components. The Company itself is based out of Bangalore. ",
+  },
+  {
+    degree: "Tech Support Manager",
+    year: "July 2021 - Oct 2021",
+    institute: "Career & Course",
+    subtitle: "Part Time",
+    location: "Kolkata, India",
+    desciption:" Worked here as part time Coder. Here I've created several Web page such as Landing page, Contact us page etc. I worked here for a very brief amount of time due to my eductional preference."
+  },
+];

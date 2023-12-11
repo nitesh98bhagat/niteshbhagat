@@ -3,7 +3,11 @@ import { DiReact } from "react-icons/di";
 import { HiDownload } from "react-icons/hi";
 import { BsFacebook, BsTrophyFill } from "react-icons/bs";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { MdOutlineWork, MdSchool } from "react-icons/md";
 import { HiLanguage } from "react-icons/hi2";
+import { FaLaptopCode } from "react-icons/fa";
+import { GoFileCode } from "react-icons/go";
+
 import {
   SiExpress,
   SiFirebase,
@@ -21,6 +25,7 @@ import ProjectSection from "../components/Tabbar/ProjectSection";
 import TechnologySection from "../components/Tabbar/TechnologySection";
 import EducationSection from "../components/Tabbar/EducationSection";
 import Image from "next/image";
+import WorkSection from "../components/WorkSection";
 
 export default function Home() {
   const [tabIndex, setTabIndex] = useState(0);
@@ -35,16 +40,20 @@ export default function Home() {
     <div className="flex flex-col bg-zinc-900 text-zinc-50">
       <Head>
         <title>
-          Nitesh Kumar Bhagat | Experienced in Web development, UI/UX{" "}
+          Nitesh Kumar Bhagat | Seasoned web developer skilled in React,
+          Tailwind, Next.js, Express.
         </title>
 
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/nitesh.jpeg" />
 
         <meta charset="UTF-8" />
-        <meta name="description" content="Experience Web Developer" />
+        <meta
+          name="description"
+          content="Seasoned web developer skilled in React, Tailwind, Next.js, Express. Crafting dynamic, efficient web solutions for your success."
+        />
         <meta
           name="keywords"
-          content="HTML, CSS, JavaScript, Software developer, Web developer, React, Next js, "
+          content="React, Tailwind, Express, MongoDB, web development, frontend, backend, JavaScript, API, responsive design"
         />
         <meta name="author" content="Nitesh Kumar Bhagat" />
         <meta
@@ -107,38 +116,67 @@ export default function Home() {
           </div>
         </div>
 
-        {/* <Image
-          src="https://firebasestorage.googleapis.com/v0/b/fleeke-ebe0e.appspot.com/o/uploads%2FScreenshot_2023-03-21-17-28-25-56.jpg?alt=media&token=fd967908-a581-416f-ba01-3b3760126072"
-          alt="Nitesh Bhagat's picture"
-          width={200}
-          height={200}
-          className="rounded-full sm:w-1/3 sm:h-1/3 object-cover border-4 md:border-8 border-zinc-100  "
-        /> */}
-
         <img
-          src="https://firebasestorage.googleapis.com/v0/b/fleeke-ebe0e.appspot.com/o/uploads%2FSnapchat-1105126184.jpg?alt=media&token=81b83af5-bb42-47a2-8cdb-e1e35117d0bb"
+          src={"./nitesh.jpeg"}
           alt="Nitesh Bhagat's picture"
           className="rounded-full aspect-square w-1/3 h-1/3  object-cover border-4 md:border-8 border-zinc-100  "
         />
       </div>
+      {/* Work section */}.
+      <div className="bg-zinc-800/30 w-full sm:py-10 sm:px-24 flex flex-col ">
+        <h1 className=" cursor-pointer  p-3 sm:p-0 mt-10 flex flow-row items-start gap-2  ">
+          <MdOutlineWork size={40} />
 
-      {/* Project section */}
-      <div className="bg-zinc-800/30 w-full sm:py-8 sm:px-24 flex flex-col ">
-        <div className="flex-row flex space-x-8 overflow-x-auto sm:overflow-hidden">
-          {["Projects", "Technologies", "Qualifications"].map((e, i) => (
-            <h1
-              key={i}
-              onClick={() => setTabIndex(i)}
-              className={`text-2xl sm:text-4xl font-bold cursor-pointer  p-3 sm:p-0 ${
-                tabIndex === i ? "text-zinc-50" : "text-zinc-600"
-              }`}
-            >
-              {e}
-            </h1>
-          ))}
-        </div>
-        {tabBarView[tabIndex]}
+          <div className="flex-col flex">
+            <span className="text-2xl sm:text-4xl font-bold">
+              Work Experience
+            </span>
+          </div>
+        </h1>
 
+        <WorkSection />
+      </div>
+      {/* Project */}
+      <div className="bg-zinc-800/30 w-full sm:py-10 sm:px-24 flex flex-col ">
+        <h1 className=" cursor-pointer  p-3 sm:p-0 mt-10 flex flow-row items-start gap-2  ">
+          <FaLaptopCode size={40} />
+
+          <div className="flex-col flex">
+            <span className="text-2xl sm:text-4xl font-bold">Projects</span>
+          </div>
+        </h1>
+
+        <ProjectSection />
+      </div>
+      {/* Technologies */}
+      <div className="bg-zinc-800/30 w-full sm:py-10 sm:px-24 flex flex-col ">
+        <h1 className=" cursor-pointer  p-3 sm:p-0 mt-10 flex flow-row items-start gap-2  ">
+          <GoFileCode size={40} />
+
+          <div className="flex-col flex">
+            <span className="text-2xl sm:text-4xl font-bold">
+              Technologies & Languages
+            </span>
+          </div>
+        </h1>
+
+        <TechnologySection />
+      </div>
+      {/* Technologies */}
+      <div className="bg-zinc-800/30 w-full sm:py-10 sm:px-24 flex flex-col ">
+        <h1 className=" cursor-pointer  p-3 sm:p-0 mt-10 flex flow-row items-start gap-2  ">
+          <MdSchool size={40} />
+
+          <div className="flex-col flex">
+            <span className="text-2xl sm:text-4xl font-bold">
+              Qualifications
+            </span>
+          </div>
+        </h1>
+
+        <EducationSection />
+      </div>
+      <div className="bg-zinc-800/30 w-full sm:py-10 sm:px-24 flex flex-col ">
         {/* Ui Design */}
         <h1 className="text-2xl sm:text-4xl font-bold cursor-pointer  p-3 sm:p-0 mt-10">
           UI Design
@@ -227,7 +265,6 @@ export default function Home() {
           />
         ))}
       </div>
-
       {/* languages, programing lang */}
       <div className="flex-row flex justify-between p-24">
         <HiLanguage size={300} className="text-emerald-500" />
