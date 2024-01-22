@@ -36,6 +36,24 @@ export default function Home() {
     <EducationSection key={"education"} />,
   ];
 
+  const schema = {
+    "@context": "https://schema.org/",
+    "@type": "Person",
+    name: "Nitesh Bhagat",
+    url: "https://niteshbhagat.vercel.app/",
+    image: "https://niteshbhagat.vercel.app/nitesh.jpeg",
+    sameAs: [
+      "https://www.instagram.com/_nitesh_bhagat_/",
+      "https://www.linkedin.com/in/nitesh-bhagat-a8b996137/",
+      "https://github.com/nitesh98bhagat",
+    ],
+    jobTitle: "Software Developer",
+    worksFor: {
+      "@type": "Organization",
+      name: "Rehook.ai",
+    },
+  };
+
   return (
     <div className="flex flex-col bg-zinc-900 text-zinc-50">
       <Head>
@@ -60,25 +78,10 @@ export default function Home() {
           name="viewport"
           content="width=device-width, initial-scale=1.0"
         ></meta>
-        <script type="application/ld+json">
-          {{
-            "@context": "https://schema.org/",
-            "@type": "Person",
-            name: "Nitesh Bhagat",
-            url: "https://niteshbhagat.vercel.app/",
-            image: "https://niteshbhagat.vercel.app/nitesh.jpeg",
-            sameAs: [
-              "https://www.instagram.com/_nitesh_bhagat_/",
-              "https://www.linkedin.com/in/nitesh-bhagat-a8b996137/",
-              "https://github.com/nitesh98bhagat",
-            ],
-            jobTitle: "Software Developer",
-            worksFor: {
-              "@type": "Organization",
-              name: "Rehook.ai",
-            },
-          }}
-        </script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
       </Head>
       {/* intro-section */}
       <div className="flex flex-col-reverse  sm:flex-row  md:py-8 md:px-24 p-4  justify-between ">
